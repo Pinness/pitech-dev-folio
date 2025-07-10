@@ -8,32 +8,32 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* PiTech Brand Colors - Sophisticated palette with dim yellow and brown */
-    --background: 41 12% 96%;
-    --foreground: 28 25% 15%;
+    /* PiTech Brand Colors - Vibrant palette with bright yellow and complementary tones */
+    --background: 48 20% 97%;
+    --foreground: 210 25% 15%;
 
-    --card: 42 15% 98%;
-    --card-foreground: 28 25% 15%;
+    --card: 48 25% 99%;
+    --card-foreground: 210 25% 15%;
 
-    --popover: 42 15% 98%;
-    --popover-foreground: 28 25% 15%;
+    --popover: 48 25% 99%;
+    --popover-foreground: 210 25% 15%;
 
-    /* Primary: Warm dim yellow */
-    --primary: 45 35% 55%;
-    --primary-foreground: 41 12% 96%;
-    --primary-glow: 45 45% 65%;
+    /* Primary: Bright vibrant yellow */
+    --primary: 48 95% 65%;
+    --primary-foreground: 210 25% 15%;
+    --primary-glow: 48 100% 75%;
 
-    /* Secondary: Rich brown */
-    --secondary: 28 25% 25%;
-    --secondary-foreground: 41 12% 96%;
+    /* Secondary: Deep navy blue */
+    --secondary: 210 45% 25%;
+    --secondary-foreground: 48 20% 97%;
 
-    /* Muted: Soft brown-gray */
-    --muted: 35 15% 88%;
-    --muted-foreground: 28 15% 45%;
+    /* Muted: Soft warm gray */
+    --muted: 45 15% 90%;
+    --muted-foreground: 210 15% 45%;
 
-    /* Accent: Warm bronze */
-    --accent: 35 30% 35%;
-    --accent-foreground: 41 12% 96%;
+    /* Accent: Rich coral */
+    --accent: 15 65% 55%;
+    --accent-foreground: 48 20% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 41 12% 96%;
