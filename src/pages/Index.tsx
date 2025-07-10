@@ -26,7 +26,7 @@ import {
   BookOpen,
   Briefcase
 } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
+import heroBackground from '@/assets/1752184730238.jpg';
 import avatarPlaceholder from '@/assets/avatar-placeholder.jpg';
 import pitechLogo from '@/assets/pitech-logo.jpg';
 
