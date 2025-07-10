@@ -27,7 +27,7 @@ import {
   Briefcase
 } from 'lucide-react';
 import heroBackground from '@/assets/1752184730238.jpg';
-import avatarPlaceholder from '@/assets/avatar-placeholder.jpg';
+import avatarPlaceholder from '@/assets/1752184730238.jpg';
 import pitechLogo from '@/assets/pitech-logo.jpg';
 
 const Portfolio = () => {
