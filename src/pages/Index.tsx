@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -34,6 +35,17 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
 
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+
+  
   const skills = {
     technical: [
       'Python', 'JavaScript', 'TypeScript', 'Flask', 'Django', 'React', 
@@ -137,6 +149,41 @@ const Portfolio = () => {
     return () => observer.disconnect();
   }, []);
 
+
+                       
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSending(true);
+    setError('');
+    setSent(false);
+
+    const serviceID = 'YOUR_SERVICE_ID';
+    const templateID = 'YOUR_TEMPLATE_ID';
+    const userID = 'YOUR_PUBLIC_KEY';
+
+    try {
+      await emailjs.send(
+        serviceID,
+        templateID,
+        form,
+        userID
+      );
+      setSent(true);
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+    }
+    setSending(false);
+  };
+
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -557,41 +604,81 @@ const Portfolio = () => {
               
               {/* Contact Form */}
               <Card className="shadow-elegant">
-                <CardHeader>
-                  <CardTitle>Send Me a Message</CardTitle>
-                  <CardDescription>
-                    I'd love to hear about your project ideas and collaboration opportunities.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground">Name</label>
-                      <Input placeholder="Your name" className="mt-1" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground">Email</label>
-                      <Input type="email" placeholder="your@email.com" className="mt-1" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground">Subject</label>
-                    <Input placeholder="What's this about?" className="mt-1" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground">Message</label>
-                    <Textarea 
-                      placeholder="Tell me about your project or idea..." 
-                      rows={5} 
-                      className="mt-1" 
-                    />
-                  </div>
-                  <Button variant="hero" className="w-full">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Send Message
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <CardTitle>Send Me a Message</CardTitle>
+                    <CardDescription>
+                      I'd love to hear about your project ideas and collaboration opportunities.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <form onSubmit={sendEmail}>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-sm font-medium text-foreground">Name</label>
+                          <Input
+                            name="name"
+                            value={form.name}
+                            onChange={handleInputChange}
+                            placeholder="Your name"
+                            className="mt-1"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-foreground">Email</label>
+                          <Input
+                            name="email"
+                            type="email"
+                            value={form.email}
+                            onChange={handleInputChange}
+                            placeholder="your@email.com"
+                            className="mt-1"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium text-foreground">Subject</label>
+                        <Input
+                          name="subject"
+                          value={form.subject}
+                          onChange={handleInputChange}
+                          placeholder="What's this about?"
+                          className="mt-1"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium text-foreground">Message</label>
+                        <Textarea
+                          name="message"
+                          value={form.message}
+                          onChange={handleInputChange}
+                          placeholder="Tell me about your project or idea..."
+                          rows={5}
+                          className="mt-1"
+                          required
+                        />
+                      </div>
+                      <Button variant="hero" className="w-full" type="submit" disabled={sending}>
+                        <Mail className="w-4 h-4 mr-2" />
+                        {sending ? 'Sending...' : 'Send Message'}
+                      </Button>
+                      {sent && (
+                        <div className="mt-4 text-green-600 text-center">
+                          Message sent! I'll get back to you soon.
+                        </div>
+                      )}
+                      {error && (
+                        <div className="mt-4 text-red-600 text-center">
+                          {error}
+                        </div>
+                      )}
+                    </form>
+                  </CardContent>
+                </Card>
+
+              
             </div>
           </div>
         </div>
