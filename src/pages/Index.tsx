@@ -164,9 +164,9 @@ const Portfolio = () => {
     setError('');
     setSent(false);
 
-    const serviceID = 'YOUR_SERVICE_ID';
-    const templateID = 'YOUR_TEMPLATE_ID';
-    const userID = 'YOUR_PUBLIC_KEY';
+    const serviceID = 'service_vgr8hln';
+    const templateID = 'template_8brao6m';
+    const userID = 'OsVg5fLUdBewTe41Q';
 
     try {
       await emailjs.send(
