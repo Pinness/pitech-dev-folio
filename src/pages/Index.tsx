@@ -68,7 +68,9 @@ const Portfolio = () => {
       category: 'web-app',
       github: 'https://github.com/Pinness/Health_Quest',
       highlights: ['REST API Development', 'Full-Stack Implementation', 'Gamification', 'User-Centered Design'],
-      description: 'Developed a full MVP for a scalable public health quiz platform, with dynamic quiz logic, progress tracking, gamification, and inclusive UX. Prioritized modularity and future extensibility.'
+      description: 'Led the end-to-end development of HealthQuest, an interactive web application for public health education. Architected the backend using Flask and SQLAlchemy, implemented dynamic quiz logic, and designed the full-stack user experience with Bootstrap and Jinja2. Prioritized modularity, scalability, and accessibility, ensuring the platform could support diverse user needs and future feature expansion.
+
+'
     },
     {
       id: 2,
@@ -88,9 +90,9 @@ const Portfolio = () => {
       role: 'Backend Engineer',
       stack: ['Django', 'MySQL', 'JWT Auth', 'Celery', 'Redis', 'Twilio'],
       category: 'backend',
-      github: 'https://github.com/orgs/JechSpace/dashboard',
+      github: 'https://github.com/orgs/JechSpace',
       highlights: ['JWT Authentication', 'RBAC', 'Notifications', 'Agile Collaboration'],
-      description: 'Engineered JWT auth, RBAC, and Redis-driven booking logic. Integrated Twilio for notifications and automated alerts, collaborating across teams for PRD-driven Agile delivery.'
+      description: 'Developed and maintained key backend components for JechSpace, a workspace management system. Implemented advanced authentication mechanisms (JWT, RBAC), architected Redis-driven booking workflows, and integrated Twilio for automated notifications. Played a central role in Agile team collaboration, ensuring timely delivery of features and scalable, production-ready infrastructure..'
     }
   ];
 
@@ -196,11 +198,7 @@ const Portfolio = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <div className="animate-fade-in">
-            <img 
-              src={pitechLogo} 
-              alt="PiTech Logo" 
-              className="w-24 h-24 mx-auto mb-6 rounded-full shadow-glow animate-float"
-            />
+            
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
               Happiness Adam
             </h1>
@@ -208,7 +206,8 @@ const Portfolio = () => {
               Software Engineer & Web Developer
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Passionate about building inclusive tech that empowers communities and drives meaningful impact.
+              I craft web solutions that resonate, empower, and make a difference. 
+              Let’s build something remarkable together
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -225,7 +224,7 @@ const Portfolio = () => {
                 onClick={() => scrollToSection('contact')}
                 className="animate-slide-up"
               >
-                Get In Touch
+                Let’s Connect & Collaborate!
               </Button>
             </div>
           </div>
@@ -244,19 +243,22 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">About Me</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-4">The Person Behind the Solutions</h2>
               <div className="w-24 h-1 bg-gradient-primary mx-auto"></div>
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I am Happiness Adam, a dedicated Software Engineer and Web Developer with a strong foundation in Economics and a passion for building inclusive, impactful technology. My journey bridges analytical thinking and creative problem-solving, empowered by a user-centric mindset and a collaborative spirit.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  I thrive on architecting robust solutions—whether designing secure APIs, leading backend logic, or ensuring every user feels seen and empowered. My unique blend of technical depth, adaptability, and attention to detail drives me to deliver products that matter, partnering with teams who care about real-world impact.
-                </p>
-
+                  👋 Hi, I’m Happiness Adam, a Fullstack Developer passionate about helping businesses and startups grow with smart, reliable, and easy-to-use web solutions. 
+                      Here’s what I do best:
+                      • Create custom websites and web apps that truly tell your brand’s story.
+                      • Build secure login systems for data and user protection.
+                      • Develop powerful APIs for seamless growth and integration.
+                      • Set up real-time analytics, notifications, and automation to keep you ahead.
+                      • Make everything easy to use, scalable, and future-ready.
+                      Partnering with me means less worry about tech headaches, just solutions that help your business goals become reality.
+                
 
 
 
@@ -570,9 +572,7 @@ const Portfolio = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">Let's Connect</h2>
               <div className="w-24 h-1 bg-gradient-primary mx-auto mb-4"></div>
-              <p className="text-lg text-muted-foreground">
-                Ready to collaborate on meaningful technology projects? Let's discuss how we can build something impactful together.
-              </p>
+              
             </div>
             
             <div className="grid md:grid-cols-2 gap-12">
@@ -587,13 +587,13 @@ const Portfolio = () => {
                     </div>
                     <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                       <Mail className="w-5 h-5" />
-                      <span>happiness@pitech.dev</span>
+                      <span>adamhappinessjw@gmail.com</span>
                     </div>
                   </div>
                 </div>
                 
                 <div>
-                  <h4 className="text-lg font-semibold text-foreground mb-4">Follow Me</h4>
+                  <h4 className="text-lg font-semibold text-foreground mb-4">Kindly Follow Me</h4>
                   <div className="flex gap-4">
                     <Button 
                       variant="outline" 
@@ -714,7 +714,7 @@ const Portfolio = () => {
                     alt="PiTech Logo" 
                     className="w-10 h-10 rounded-full"
                   />
-                  <span className="text-xl font-bold">PiTech</span>
+                  <span className="text-xl font-bold">PinsTech</span>
                 </div>
                 <p className="text-sm opacity-90">
                   Building inclusive technology that empowers communities and drives meaningful impact.
@@ -787,11 +787,9 @@ const Portfolio = () => {
             
             <div className="flex flex-col md:flex-row justify-between items-center text-sm opacity-90">
               <div>
-                © 2025 Happiness Adam | PiTech. All rights reserved.
+                © 2025 Happiness Adam | PinsTech. All rights reserved.
               </div>
-              <div className="mt-4 md:mt-0">
-                Built with React, TypeScript & Tailwind CSS
-              </div>
+             
             </div>
           </div>
         </div>
