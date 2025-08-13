@@ -68,9 +68,7 @@ const Portfolio = () => {
       category: 'web-app',
       github: 'https://github.com/Pinness/Health_Quest',
       highlights: ['REST API Development', 'Full-Stack Implementation', 'Gamification', 'User-Centered Design'],
-      description: ʻLed the end-to-end development of HealthQuest, an interactive web application for public health education. Architected the backend using Flask and SQLAlchemy, implemented dynamic quiz logic, and designed the full-stack user experience with Bootstrap and Jinja2. Prioritized modularity, scalability, and accessibility, ensuring the platform could support diverse user needs and future feature expansion.ʻ
-
-'
+      description: 'Led the end-to-end development of HealthQuest, an interactive web application for public health education. Architected the backend using Flask and SQLAlchemy, implemented dynamic quiz logic, and designed the full-stack user experience with Bootstrap and Jinja2. Prioritized modularity, scalability, and accessibility, ensuring the platform could support diverse user needs and future feature expansion.'
     },
     {
       id: 2,
