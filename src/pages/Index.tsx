@@ -256,12 +256,30 @@ const Portfolio = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I thrive on architecting robust solutions—whether designing secure APIs, leading backend logic, or ensuring every user feels seen and empowered. My unique blend of technical depth, adaptability, and attention to detail drives me to deliver products that matter, partnering with teams who care about real-world impact.
                 </p>
+
+
+
+
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button variant="elegant" className="flex items-center gap-2">
+                  {/* Download Resume Button */}
+                  <a
+                    href="/resume.pdf"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-lg shadow-elegant hover:shadow-glow transition-all"
+                    style={{ textDecoration: 'none' }}
+                  >
                     <Download className="w-4 h-4" />
                     Download Resume
-                  </Button>
-                  <Button variant="outline" className="flex items-center gap-2">
+                  </a>
+                
+                  {/* View LinkedIn Button */}
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2"
+                    onClick={() => window.open('https://www.linkedin.com/in/pinessjw-adam', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4" />
                     View LinkedIn
                   </Button>
