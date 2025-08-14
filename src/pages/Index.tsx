@@ -329,7 +329,7 @@ const Portfolio = () => {
                 <div className="flex flex-wrap gap-4 pt-4">
                   {/* Download Resume Button */}
                   <a
-                    href="/resume.pdf"
+                    href="/HAPPINESS ADAM-Resume.pdf"
                     download
                     target="_blank"
                     rel="noopener noreferrer"
@@ -915,7 +915,7 @@ const Portfolio = () => {
                 <h4 className="font-semibold mb-4">Connect</h4>
                 <div className="space-y-2 text-sm">
                   <div>+234 8104 947 058</div>
-                  <div>happiness@pitech.dev</div>
+                  <div>adamhappinessjw@gmail.com</div>
                   <div className="flex gap-3 mt-4">
                     <Button
                       variant="ghost"
