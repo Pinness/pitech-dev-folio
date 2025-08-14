@@ -286,26 +286,45 @@ const Portfolio = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                The Person Behind the Solutions
+                The Person Behind the Solution
               </h2>
               <div className="w-24 h-1 bg-gradient-primary mx-auto"></div>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  👋 Hi, I’m Happiness Adam, a Fullstack Developer passionate
-                  about helping businesses and startups grow with smart,
-                  reliable, and easy-to-use web solutions. Here’s what I do
-                  best: • Create custom websites and web apps that truly tell
-                  your brand’s story. • Build secure login systems for data and
-                  user protection. • Develop powerful APIs for seamless growth
-                  and integration. • Set up real-time analytics, notifications,
-                  and automation to keep you ahead. • Make everything easy to
-                  use, scalable, and future-ready. Partnering with me means less
-                  worry about tech headaches, just solutions that help your
-                  business goals become reality.
-                </p>
+                <div className="text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    👋 Hi, I’m Happiness Adam, a Fullstack Developer passionate
+                    about helping businesses and startups grow with smart,
+                    reliable, and easy-to-use web solutions.
+                  </p>
+                  <p className="mt-4 font-semibold">Here’s what I do best:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>
+                      Create custom websites and web apps that truly tell your
+                      brand’s story.
+                    </li>
+                    <li>
+                      Build secure login systems for data and user protection.
+                    </li>
+                    <li>
+                      Develop powerful APIs for seamless growth and integration.
+                    </li>
+                    <li>
+                      Set up real-time analytics, notifications, and automation
+                      to keep you ahead.
+                    </li>
+                    <li>
+                      Make everything easy to use, scalable, and future-ready.
+                    </li>
+                  </ul>
+                  <p className="mt-4">
+                    Partnering with me means less worry about tech
+                    headaches—just solutions that help your business goals
+                    become reality.
+                  </p>
+                </div>
 
                 <div className="flex flex-wrap gap-4 pt-4">
                   {/* Download Resume Button */}
@@ -695,7 +714,7 @@ const Portfolio = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">
-                    Get In Touch
+                    Say Hello!
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
