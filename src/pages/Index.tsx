@@ -261,7 +261,7 @@ const Portfolio = () => {
                 onClick={() => scrollToSection("contact")}
                 className="animate-slide-up"
               >
-                Let’s Connect & Collaborate!
+                Reach Out! Let’s Build Something Great!
               </Button>
             </div>
           </div>
@@ -714,7 +714,7 @@ const Portfolio = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">
-                    Say Hello!
+                    I’d love to hear from you!
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
@@ -772,8 +772,10 @@ const Portfolio = () => {
                 <CardHeader>
                   <CardTitle>Send Me a Message</CardTitle>
                   <CardDescription>
-                    I'd love to hear about your project ideas and collaboration
-                    opportunities.
+                    I genuinely love meeting new people and exploring new ideas.
+                    If you'd like us to work together, collaborate, or just to
+                    say hello, please use the form below. I'll respond to every
+                    message.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -815,7 +817,7 @@ const Portfolio = () => {
                         name="subject"
                         value={form.subject}
                         onChange={handleInputChange}
-                        placeholder="What's this about?"
+                        placeholder="How would you like us to work together?"
                         className="mt-1"
                         required
                       />
@@ -828,7 +830,7 @@ const Portfolio = () => {
                         name="message"
                         value={form.message}
                         onChange={handleInputChange}
-                        placeholder="Tell me about your project or idea..."
+                        placeholder="Share with me your ideas, opportunities, or gigs. Let's create something amazing together!"
                         rows={5}
                         className="mt-1"
                         required
@@ -845,7 +847,7 @@ const Portfolio = () => {
                     </Button>
                     {sent && (
                       <div className="mt-4 text-green-600 text-center">
-                        Message sent! I'll get back to you soon.
+                        Thank you for reaching out! I'll reply as soon as I can.
                       </div>
                     )}
                     {error && (
