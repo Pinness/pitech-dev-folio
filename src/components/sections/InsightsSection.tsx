@@ -1,4 +1,4 @@
-import { Lock, Wifi, Server, Database } from "lucide-react";
+import { Lock, Wifi, Server, Database, Layers } from "lucide-react";
 
 const insights = [
   {
@@ -24,10 +24,17 @@ const insights = [
   },
   {
     icon: Database,
-    title: "How Authentication Systems Work Behind the Hood",
+    title: "How Databases Handle Your Queries",
     description:
-      "From bcrypt password hashing to dual-token strategies (access + refresh), authentication involves cryptographic signing, token expiry management, and session rotation — all happening in milliseconds before you see your dashboard.",
-    tags: ["Security", "Cryptography", "Sessions"],
+      "When you click 'save,' your data travels through an ORM, gets translated to SQL, hits an optimized query planner, writes to disk with ACID guarantees, and returns a confirmation — all in milliseconds. Understanding this pipeline is key to building performant applications.",
+    tags: ["PostgreSQL", "ORM", "Performance"],
+  },
+  {
+    icon: Layers,
+    title: "How Scalable Systems Are Designed",
+    description:
+      "Scalability isn't about handling more traffic — it's about designing systems that grow gracefully. From connection pooling and caching layers to service decomposition and async processing, every architectural decision shapes how a system performs under pressure.",
+    tags: ["Scalability", "System Design", "Architecture"],
   },
 ];
 
@@ -49,7 +56,7 @@ const InsightsSection = () => (
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {insights.map((insight) => (
             <div
               key={insight.title}
@@ -58,7 +65,7 @@ const InsightsSection = () => (
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                 <insight.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-display text-lg font-semibold text-foreground">
+              <h3 className="font-display text-base font-semibold text-foreground">
                 {insight.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

@@ -3,13 +3,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Github,
-  ExternalLink,
   Server,
   Shield,
   Globe,
   Database,
   Layers,
   ArrowRight,
+  Heart,
+  MessageSquare,
+  Wallet,
 } from "lucide-react";
 
 const projects = [
@@ -26,7 +28,7 @@ const projects = [
       "Built as a React SPA with TypeScript and Tailwind CSS, integrated with Supabase for backend services. The architecture separates concerns with a component-driven frontend, Supabase Edge Functions for server logic, and a real-time CMS for content management. Admin authentication was implemented with a dedicated login system.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
     challenges: [
-      "Designed a CMS integration allowing non-technical staff to update content in real-time without developer intervention",
+      "Designed a CMS integration allowing non-technical staff to update content in real-time",
       "Implemented admin authentication with secure login flows",
       "Resolved client-side routing issues on Vercel deployment (SPA fallback configuration)",
       "Optimized Open Graph meta tags for social sharing and SEO",
@@ -35,6 +37,79 @@ const projects = [
       "Building for non-technical users requires empathy-driven UX. The CMS architecture taught me to think about content as data — decoupling presentation from content management enables faster iterations and reduces maintenance overhead.",
     github: "https://github.com/Pinness/DexgenElectricals_frontend",
     icon: Globe,
+    role: "Solo Developer — designed, built, and deployed the entire platform end-to-end.",
+  },
+  {
+    id: "healthquest",
+    title: "HealthQuest",
+    subtitle: "Interactive Public Health Quiz Platform",
+    category: "web",
+    overview:
+      "An interactive HIV and public health quiz web application designed to educate users through gamified quizzes across categories including HIV basics, transmission, prevention, treatment, and community services.",
+    problem:
+      "Public health education often relies on static, uninspiring content. There was a need for an engaging, interactive platform that makes learning about HIV accessible, memorable, and scalable — turning passive reading into active learning through gamification.",
+    architecture:
+      "Built as a Flask application with SQLAlchemy ORM for database management and Jinja2 for server-side rendering. The quiz engine implements dynamic question logic with category-based routing, progress tracking per user session, and a scoring/gamification layer. MySQL handles persistent data storage with structured schema migrations.",
+    techStack: ["Python", "Flask", "SQLAlchemy", "MySQL", "Jinja2", "Bootstrap", "CSS/SCSS"],
+    challenges: [
+      "Engineered dynamic quiz logic with progress tracking and category-based question routing",
+      "Designed a gamification system with scoring and achievement tracking to boost engagement",
+      "Built modular architecture for future extensibility — APIs, user-generated content, additional quiz categories",
+      "Prioritized inclusive UX to ensure accessibility across diverse user demographics",
+    ],
+    lessons:
+      "Gamification isn't just about points — it's about making learning feel rewarding. Building the quiz engine taught me how to structure dynamic content delivery systems and think about user motivation as a first-class engineering concern.",
+    github: "https://github.com/Pinness/Health_Quest",
+    icon: Heart,
+    role: "Solo Developer — designed the full MVP, implemented quiz logic, database schema, and frontend.",
+  },
+  {
+    id: "ai-character",
+    title: "AI Character Conversation Platform",
+    subtitle: "FastAPI AI Backend Architecture",
+    category: "backend",
+    overview:
+      "An API-only backend platform that enables users to chat with AI-powered characters. Built with FastAPI and a clean layered architecture, integrating Groq's LLM API with a stub mode for offline development.",
+    problem:
+      "AI conversation platforms often tightly couple frontend and backend logic, making integration difficult. This project required a pure API backend that any frontend could consume, with clean separation between character management, conversation lifecycle, and LLM integration.",
+    architecture:
+      "Production-ready modular architecture with distinct layers: api/ (FastAPI routes), service/ (CharacterService, ConversationService, LLMService, PlatformService orchestrator), model/ (Pydantic schemas), and core/ (configuration, logging). The PlatformService composes domain services for clean orchestration. LLM stub mode enables development without external API dependencies.",
+    techStack: ["Python", "FastAPI", "Pydantic", "Groq API", "Pytest"],
+    challenges: [
+      "Designed a PlatformService orchestrator that cleanly composes character, conversation, and LLM services",
+      "Implemented LLM stub mode for offline development and testing without external API costs",
+      "Built comprehensive test coverage with Pytest for API, services, and utilities",
+      "Structured predefined characters via JSON data files for easy extensibility",
+    ],
+    lessons:
+      "Clean architecture pays dividends even on smaller projects. The service composition pattern — where a PlatformService orchestrates domain services — is a pattern I now use across all backend projects. Stub modes for external services are essential for developer productivity.",
+    github: "https://github.com/Algorithmia-SE/AI-Character-Conversation-Platform",
+    icon: MessageSquare,
+    role: "Backend Engineer — architected the service layer, API design, and testing infrastructure.",
+  },
+  {
+    id: "fyenance",
+    title: "Fyenance",
+    subtitle: "Personal Expense Tracker",
+    category: "fullstack",
+    overview:
+      "A full-stack personal expense tracker with dynamic dashboards, budget management, real-time analytics, and currency updates — built with Django backend and React frontend.",
+    problem:
+      "Individuals need a simple yet powerful way to track expenses, set budgets, and visualize spending patterns. Existing tools are either too complex or lack real-time analytics. Fyenance bridges this gap with a clean, intuitive interface backed by robust backend logic.",
+    architecture:
+      "Django handles backend tasks including database management, server-side logic, and API endpoints. React provides the dynamic, interactive frontend with auth context for session management and global state for transactions and budgets. JWT authentication secures all API endpoints with token-based session management.",
+    techStack: ["Django", "React", "JavaScript", "PostgreSQL", "JWT", "REST APIs"],
+    challenges: [
+      "Implemented JWT authentication with secure token management and session handling",
+      "Built comprehensive API documentation for frontend-backend integration",
+      "Engineered budget logic with real-time analytics and spending pattern visualization",
+      "Designed a dynamic dashboard that adapts between new and returning user experiences",
+    ],
+    lessons:
+      "Working as a backend contributor on a team project taught me the importance of API contracts and documentation. When multiple developers build against the same backend, clear endpoint documentation and consistent response schemas become critical infrastructure.",
+    github: "https://github.com/STARR44/fyenance",
+    icon: Wallet,
+    role: "Backend Developer — built JWT authentication, API endpoints, budget logic, and documentation.",
   },
   {
     id: "auth",
@@ -64,9 +139,10 @@ const projects = [
       "Managed database migrations with Alembic for schema evolution without data loss",
     ],
     lessons:
-      "Authentication is never 'simple.' Every decision — token expiry, password hashing algorithm, session strategy — has security implications. Building this from scratch deepened my understanding of how identity systems work behind the hood, from bcrypt rounds to JWT claims and token rotation patterns.",
+      "Authentication is never 'simple.' Every decision — token expiry, password hashing algorithm, session strategy — has security implications. Building this from scratch deepened my understanding of how identity systems work behind the hood.",
     github: "https://github.com/Pinness/UserAuthentication_fastapi",
     icon: Shield,
+    role: "Solo Developer — designed and implemented the complete authentication system.",
   },
   {
     id: "tally",
@@ -94,16 +170,18 @@ const projects = [
       "Set up containerized deployment for consistent development environments",
     ],
     lessons:
-      "Hackathons test your ability to make quick architectural decisions. The key insight: good patterns don't slow you down — they accelerate you. Starting with clean separation pays off even under time pressure.",
+      "Hackathons test your ability to make quick architectural decisions. The key insight: good patterns don't slow you down — they accelerate you.",
     github: "https://github.com/Pinness/tally-connect",
     icon: Database,
+    role: "Solo Developer — built the entire backend architecture during the hackathon.",
   },
 ];
 
 const filters = [
-  { key: "all", label: "All" },
-  { key: "web", label: "Web Development" },
-  { key: "backend", label: "Backend Systems" },
+  { key: "all", label: "All Projects" },
+  { key: "web", label: "Web" },
+  { key: "backend", label: "Backend" },
+  { key: "fullstack", label: "Full-Stack" },
 ];
 
 const ProjectsSection = () => {
@@ -131,7 +209,7 @@ const ProjectsSection = () => {
           </div>
 
           {/* Filters */}
-          <div className="flex justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             {filters.map((f) => (
               <button
                 key={f.key}
@@ -199,7 +277,6 @@ const ProjectsSection = () => {
                   {isOpen && (
                     <div className="px-6 md:px-8 pb-8 space-y-8 border-t border-border/30 pt-6 animate-fade-in">
                       <div className="grid md:grid-cols-2 gap-8">
-                        {/* Problem */}
                         <div className="space-y-3">
                           <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
                             The Problem
@@ -209,7 +286,6 @@ const ProjectsSection = () => {
                           </p>
                         </div>
 
-                        {/* Architecture */}
                         <div className="space-y-3">
                           <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
                             Architecture
@@ -220,10 +296,20 @@ const ProjectsSection = () => {
                         </div>
                       </div>
 
+                      {/* My Role */}
+                      <div className="space-y-3">
+                        <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
+                          My Role
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {project.role}
+                        </p>
+                      </div>
+
                       {/* Challenges */}
                       <div className="space-y-3">
                         <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
-                          Engineering Challenges & Solutions
+                          Engineering Highlights
                         </h4>
                         <ul className="grid md:grid-cols-2 gap-3">
                           {project.challenges.map((c, i) => (
@@ -262,7 +348,6 @@ const ProjectsSection = () => {
                         </p>
                       </div>
 
-                      {/* Link */}
                       <Button
                         variant="outline"
                         onClick={() => window.open(project.github, "_blank")}

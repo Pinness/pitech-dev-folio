@@ -5,36 +5,36 @@ const services = [
     icon: Globe,
     title: "Web Development",
     description:
-      "Business websites, startup platforms, and modern responsive web experiences that tell your brand's story.",
-    items: ["Business Websites", "Startup Platforms", "Responsive Design"],
+      "Professional business websites, modern responsive platforms, and performance-optimized sites that establish your brand's digital presence and drive engagement.",
+    items: ["Business Websites", "Modern Responsive Platforms", "Performance-Optimized Sites"],
   },
   {
     icon: Layout,
     title: "Web Applications",
     description:
-      "Custom dashboards, SaaS platforms, and internal tools engineered for performance and scalability.",
-    items: ["Dashboards", "SaaS Platforms", "Custom Tools"],
+      "Custom dashboards, SaaS platforms, and internal business tools engineered for performance, usability, and scalability.",
+    items: ["Dashboards", "SaaS Platforms", "Internal Business Tools"],
   },
   {
     icon: Server,
     title: "Backend Engineering",
     description:
-      "API systems, authentication architecture, and scalable backend infrastructure built for production.",
-    items: ["API Systems", "Auth Architecture", "Scalable Infrastructure"],
+      "FastAPI and Django systems, RESTful API development, and authentication architecture built for security and production-grade reliability.",
+    items: ["FastAPI Systems", "API Development", "Authentication Architecture"],
   },
   {
     icon: Target,
     title: "Landing Pages & Funnels",
     description:
-      "High-converting product launch pages and marketing landing pages designed to drive results.",
-    items: ["Product Launches", "Marketing Pages", "Conversion Optimization"],
+      "High-converting landing pages, product launch campaigns, and marketing funnels designed to turn visitors into customers.",
+    items: ["High-Converting Landing Pages", "Campaign Pages", "Marketing Funnels"],
   },
   {
     icon: Rocket,
     title: "Startup MVP Development",
     description:
-      "Rapid product development with solid backend architecture and database design from day one.",
-    items: ["Rapid Prototyping", "Backend Architecture", "Database Design"],
+      "Rapid product architecture, backend systems, database design, and deployment — everything a startup needs to go from idea to launch.",
+    items: ["Product Architecture", "Backend Systems", "Database Design & Deployment"],
   },
 ];
 
@@ -48,12 +48,16 @@ const ServicesSection = () => (
             What I Build
           </p>
           <h2 className="text-3xl md:text-4xl font-display font-bold">
-            Services & Capabilities
+            Solutions & Capabilities
           </h2>
+          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+            From business websites to startup MVPs — engineered solutions that
+            solve real problems and scale with your growth.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="group glass glass-hover rounded-xl p-6 space-y-4"
