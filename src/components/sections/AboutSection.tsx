@@ -25,31 +25,32 @@ const AboutSection = () => (
               About
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold leading-tight">
-              The engineer behind{" "}
+              The Engineer Behind{" "}
               <span className="text-gradient">PinessTech Studio</span>
             </h2>
           </div>
 
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              I'm Happiness Adam — a software engineer who builds modern digital
-              products and deeply understands how technology works behind the hood.
-              PinessTech Studio is the culmination of my engineering philosophy:
-              every system should be robust beneath the surface and intuitive on
-              the outside.
+              I'm Happiness Adam — a software engineer passionate about building
+              systems that work beautifully on the surface and are robust behind
+              the hood. PinessTech Studio is the home for that mission: engineering
+              modern digital products, helping businesses and startups build
+              reliable platforms, and explaining the technology that powers them.
             </p>
             <p>
-              With a background in Economics and full-stack software engineering,
+              With a foundation in Economics and full-stack software engineering,
               I bring analytical thinking to every architecture decision. I've
-              designed authentication systems, built scalable APIs, engineered
-              real-time backends, and delivered complete web platforms — always
-              with an eye on clean code, security, and the end user's experience.
+              designed secure authentication systems, built scalable APIs with
+              FastAPI and Django, engineered real-time backends, and delivered
+              complete web platforms — always with an eye on clean code, security,
+              and the end user's experience.
             </p>
             <p>
-              Beyond building, I'm passionate about explaining technology —
-              breaking down complex systems like authentication flows, API
-              architecture, and backend infrastructure so others can learn and
-              grow alongside me.
+              Beyond building, I'm deeply committed to teaching technology. I
+              break down complex systems — authentication flows, API architecture,
+              backend infrastructure — so that aspiring engineers and curious
+              minds can understand how things truly work behind the scenes.
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 
 const CTASection = () => {
   const scrollTo = (id: string) =>
@@ -15,9 +15,9 @@ const CTASection = () => {
             <span className="text-gradient">next digital product?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Whether you need a website, a web application, a startup MVP, or a
-            scalable backend system — PinessTech Studio is ready to engineer the
-            solution.
+            If you're building a startup, business platform, or digital product
+            and want it engineered properly — PinessTech Studio can help you
+            build it. From architecture to deployment, every detail matters.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -31,10 +31,11 @@ const CTASection = () => {
             <Button
               variant="outline"
               size="lg"
-              onClick={() => scrollTo("projects")}
-              className="font-display text-base"
+              onClick={() => scrollTo("contact")}
+              className="font-display text-base gap-2"
             >
-              View Case Studies
+              <MessageSquare className="w-4 h-4" />
+              Discuss Your Idea
             </Button>
           </div>
         </div>
