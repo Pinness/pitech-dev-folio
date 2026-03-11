@@ -20,7 +20,7 @@ const HeroSection = () => {
 
       {/* Grid pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage:
             "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
@@ -28,28 +28,34 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="space-y-8">
+          {/* Greeting */}
+          <p
+            className="text-sm font-display text-primary tracking-widest uppercase animate-fade-in"
+          >
+            Welcome to PinessTech Studio
+          </p>
+
           {/* Main heading */}
           <h1
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight animate-fade-in"
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight animate-fade-in"
           >
-            Engineering Modern Digital
+            Engineering digital platforms.
             <br />
-            Products That Work —
+            Exploring how technology works
             <br />
-            <span className="text-gradient">Inside and Behind the Hood.</span>
+            <span className="text-gradient">behind the hood.</span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle — warm, personal */}
           <p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in"
+            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s", opacity: 0 }}
           >
-            PinessTech Studio builds modern websites, develops scalable web
-            applications, engineers robust backend systems, helps startups
-            launch digital platforms, and teaches how technology works behind
-            the scenes.
+            I build modern websites, develop scalable web applications,
+            engineer backend systems, help startups launch digital platforms
+            — and explain how it all works so others can learn too.
           </p>
 
           {/* CTA */}
@@ -62,7 +68,7 @@ const HeroSection = () => {
               onClick={() => scrollTo("projects")}
               className="font-display text-base gap-2 group"
             >
-              View Projects
+              Explore Engineering Work
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -71,7 +77,7 @@ const HeroSection = () => {
               onClick={() => scrollTo("contact")}
               className="font-display text-base"
             >
-              Start a Project
+              Let's Build Something
             </Button>
             <Button
               variant="ghost"
@@ -84,7 +90,7 @@ const HeroSection = () => {
               }
               className="font-display text-base text-primary hover:text-primary"
             >
-              Join the Mentorship Community
+              Join the Learning Community
             </Button>
           </div>
         </div>

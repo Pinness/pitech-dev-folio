@@ -5,9 +5,9 @@ import avatarImg from "@/assets/1752184730238.jpg";
 const AboutSection = () => (
   <section id="about" className="py-24 md:py-32 relative">
     <div className="container mx-auto px-6">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-16 items-start">
         {/* Image */}
-        <div className="lg:col-span-2 flex justify-center">
+        <div className="lg:col-span-2 flex justify-center lg:sticky lg:top-32">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-accent rounded-2xl opacity-20 blur group-hover:opacity-30 transition-opacity duration-500" />
             <img
@@ -18,11 +18,11 @@ const AboutSection = () => (
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content — storytelling */}
         <div className="lg:col-span-3 space-y-6">
           <div>
             <p className="text-sm font-display text-primary tracking-widest uppercase mb-2">
-              About
+              The Journey
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold leading-tight">
               The Engineer Behind{" "}
@@ -30,27 +30,36 @@ const AboutSection = () => (
             </h2>
           </div>
 
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              I'm Happiness Adam — a software engineer passionate about building
-              systems that work beautifully on the surface and are robust behind
-              the hood. PinessTech Studio is the home for that mission: engineering
-              modern digital products, helping businesses and startups build
-              reliable platforms, and explaining the technology that powers them.
+              Technology has always fascinated me — not just using it, but
+              understanding what happens behind the scenes. How does a website
+              load instantly? How do applications authenticate users securely?
+              How do systems scale when thousands of people use them at once?
             </p>
             <p>
-              With a foundation in Economics and full-stack software engineering,
-              I bring analytical thinking to every architecture decision. I've
-              designed secure authentication systems, built scalable APIs with
-              FastAPI and Django, engineered real-time backends, and delivered
-              complete web platforms — always with an eye on clean code, security,
-              and the end user's experience.
+              Those questions pushed me deeper into engineering. What started as
+              curiosity became a discipline — studying Economics gave me
+              analytical thinking, and full-stack software engineering gave me
+              the tools to build things that actually work. Over time, that
+              curiosity turned into building real systems, experimenting with
+              architectures, and helping others understand how technology truly
+              works.
             </p>
             <p>
-              Beyond building, I'm deeply committed to teaching technology. I
-              break down complex systems — authentication flows, API architecture,
-              backend infrastructure — so that aspiring engineers and curious
-              minds can understand how things truly work behind the scenes.
+              That's what led to PinessTech Studio. It's not just a development
+              studio — it's a space where digital platforms are engineered,
+              systems are built and tested, and technology is explained in ways
+              that make sense. I've designed authentication systems from scratch,
+              built scalable APIs with FastAPI and Django, engineered real-time
+              backends, and delivered complete web platforms — always with an eye
+              on clean code, security, and the end user's experience.
+            </p>
+            <p>
+              Beyond building, I'm deeply committed to teaching. I break down
+              complex systems — authentication flows, API architecture, backend
+              infrastructure — so that aspiring engineers and curious minds can
+              understand how things truly work behind the hood.
             </p>
           </div>
 

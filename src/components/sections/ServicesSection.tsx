@@ -5,36 +5,36 @@ const services = [
     icon: Globe,
     title: "Web Development",
     description:
-      "Professional business websites, modern responsive platforms, and performance-optimized sites that establish your brand's digital presence and drive engagement.",
-    items: ["Business Websites", "Modern Responsive Platforms", "Performance-Optimized Sites"],
+      "Professional websites that establish your brand's digital presence — built to load fast, look great on every device, and grow with your business.",
+    items: ["Business & Startup Websites", "Modern Responsive Platforms", "Performance-Optimized Sites"],
   },
   {
     icon: Layout,
     title: "Web Applications",
     description:
-      "Custom dashboards, SaaS platforms, and internal business tools engineered for performance, usability, and scalability.",
-    items: ["Dashboards", "SaaS Platforms", "Internal Business Tools"],
+      "Custom dashboards, SaaS platforms, and internal tools — engineered for real users with real workflows, not just demo screenshots.",
+    items: ["Dashboards & Analytics", "SaaS Platforms", "Internal Business Tools"],
   },
   {
     icon: Server,
     title: "Backend Engineering",
     description:
-      "FastAPI and Django systems, RESTful API development, and authentication architecture built for security and production-grade reliability.",
-    items: ["FastAPI Systems", "API Development", "Authentication Architecture"],
+      "The systems that power everything behind the scenes — APIs, authentication, data pipelines — built for security, speed, and reliability.",
+    items: ["FastAPI & Django Systems", "API Architecture", "Authentication & Security"],
   },
   {
     icon: Target,
     title: "Landing Pages & Funnels",
     description:
-      "High-converting landing pages, product launch campaigns, and marketing funnels designed to turn visitors into customers.",
-    items: ["High-Converting Landing Pages", "Campaign Pages", "Marketing Funnels"],
+      "Pages designed with one goal: convert visitors into customers. Clean design, clear messaging, fast loading — every detail optimized.",
+    items: ["High-Converting Landing Pages", "Product Launch Campaigns", "Marketing Funnels"],
   },
   {
     icon: Rocket,
     title: "Startup MVP Development",
     description:
-      "Rapid product architecture, backend systems, database design, and deployment — everything a startup needs to go from idea to launch.",
-    items: ["Product Architecture", "Backend Systems", "Database Design & Deployment"],
+      "Going from idea to working product — fast. I help startups architect, build, and launch their first version without cutting corners on quality.",
+    items: ["Product Architecture", "Backend & Database Design", "Launch & Deployment"],
   },
 ];
 
@@ -45,14 +45,15 @@ const ServicesSection = () => (
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-display text-primary tracking-widest uppercase mb-2">
-            What I Build
+            How I Can Help You Build
           </p>
           <h2 className="text-3xl md:text-4xl font-display font-bold">
             Solutions & Capabilities
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
-            From business websites to startup MVPs — engineered solutions that
-            solve real problems and scale with your growth.
+          <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+            Whether you're launching a startup, scaling a platform, or need a
+            reliable engineer to build something properly — here's how
+            PinessTech Studio can help.
           </p>
         </div>
 

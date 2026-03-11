@@ -4,12 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "about" },
-  { label: "Services", href: "services" },
+  { label: "Solutions", href: "services" },
   { label: "Projects", href: "projects" },
   { label: "Mentorship", href: "mentorship" },
-  { label: "Insights", href: "insights" },
+  { label: "Behind the Hood", href: "insights" },
   { label: "Stack", href: "stack" },
-  { label: "Contact", href: "contact" },
 ];
 
 const Navbar = () => {
@@ -59,7 +58,7 @@ const Navbar = () => {
             onClick={() => scrollTo("contact")}
             className="font-display"
           >
-            Work With Me
+            Let's Talk
           </Button>
         </div>
 
@@ -91,7 +90,7 @@ const Navbar = () => {
             className="w-full font-display"
             onClick={() => scrollTo("contact")}
           >
-            Work With Me
+            Let's Talk
           </Button>
         </div>
       )}

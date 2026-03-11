@@ -12,7 +12,7 @@ const socials = [
     label: "LinkedIn",
   },
   { icon: Github, href: "https://github.com/Pinness", label: "GitHub" },
-  { icon: Twitter, href: "https://x.com/LadyPiness", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/LadyPiness", label: "Twitter / X" },
 ];
 
 const ContactSection = () => {
@@ -56,6 +56,10 @@ const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold">
               Let's Build Something Together
             </h2>
+            <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+              Have a project idea, need engineering help, or just want to talk
+              technology? I'd love to hear from you.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12">
@@ -139,7 +143,7 @@ const ContactSection = () => {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
-                  placeholder="How can PinessTech Studio help?"
+                  placeholder="What are you building?"
                   required
                 />
               </div>
@@ -151,7 +155,7 @@ const ContactSection = () => {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project, timeline, and goals..."
+                  placeholder="Tell me about your project, timeline, and what you're trying to achieve..."
                   rows={5}
                   required
                 />
