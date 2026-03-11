@@ -21,23 +21,23 @@ const projects = [
     subtitle: "Full-Stack Business Platform",
     category: "web",
     overview:
-      "A complete digital platform for an electrical services company — designed to establish online presence, manage service listings, and enable customer engagement through a modern, responsive interface.",
-    problem:
-      "The client had no digital presence. Customers couldn't discover services, request quotes, or learn about the company online. The business needed a professional platform that could scale with CMS capabilities for non-technical team members.",
+      "A complete digital platform for an electrical services company. The client had zero online presence — no way for customers to discover services, request quotes, or learn about the business. I built a professional platform from the ground up.",
+    story:
+      "This project started with a simple question: how do you take a traditional business and give it a modern digital identity? The answer wasn't just 'build a website' — it was designing a system where non-technical team members could manage content independently, where SEO and social sharing worked out of the box, and where the architecture could grow with the business.",
     architecture:
-      "Built as a React SPA with TypeScript and Tailwind CSS, integrated with Supabase for backend services. The architecture separates concerns with a component-driven frontend, Supabase Edge Functions for server logic, and a real-time CMS for content management. Admin authentication was implemented with a dedicated login system.",
+      "React SPA with TypeScript, Tailwind CSS for design, and Supabase for backend services. The CMS integration allows real-time content updates. Admin authentication was built with dedicated login flows. Deployed on Vercel with SPA fallback routing.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
-    challenges: [
-      "Designed a CMS integration allowing non-technical staff to update content in real-time",
-      "Implemented admin authentication with secure login flows",
-      "Resolved client-side routing issues on Vercel deployment (SPA fallback configuration)",
+    highlights: [
+      "Designed a CMS that non-technical staff could use to update content in real-time",
+      "Built admin authentication with secure login flows",
+      "Resolved SPA routing issues on Vercel deployment",
       "Optimized Open Graph meta tags for social sharing and SEO",
     ],
-    lessons:
-      "Building for non-technical users requires empathy-driven UX. The CMS architecture taught me to think about content as data — decoupling presentation from content management enables faster iterations and reduces maintenance overhead.",
+    reflection:
+      "Building for non-technical users requires empathy. The CMS architecture taught me to think about content as data — decoupling presentation from management enables faster iterations and less maintenance.",
     github: "https://github.com/Pinness/DexgenElectricals_frontend",
     icon: Globe,
-    role: "Solo Developer — designed, built, and deployed the entire platform end-to-end.",
+    role: "Solo Developer — designed, built, and deployed the entire platform.",
   },
   {
     id: "healthquest",
@@ -45,23 +45,23 @@ const projects = [
     subtitle: "Interactive Public Health Quiz Platform",
     category: "web",
     overview:
-      "An interactive HIV and public health quiz web application designed to educate users through gamified quizzes across categories including HIV basics, transmission, prevention, treatment, and community services.",
-    problem:
-      "Public health education often relies on static, uninspiring content. There was a need for an engaging, interactive platform that makes learning about HIV accessible, memorable, and scalable — turning passive reading into active learning through gamification.",
+      "An interactive HIV and public health quiz platform that turns passive health education into active learning through gamification.",
+    story:
+      "Public health education often relies on static, uninspiring content. I wanted to explore whether gamification could make learning about HIV — a topic people often avoid — more accessible and memorable. The result was a quiz engine with categories, progress tracking, and achievements.",
     architecture:
-      "Built as a Flask application with SQLAlchemy ORM for database management and Jinja2 for server-side rendering. The quiz engine implements dynamic question logic with category-based routing, progress tracking per user session, and a scoring/gamification layer. MySQL handles persistent data storage with structured schema migrations.",
-    techStack: ["Python", "Flask", "SQLAlchemy", "MySQL", "Jinja2", "Bootstrap", "CSS/SCSS"],
-    challenges: [
-      "Engineered dynamic quiz logic with progress tracking and category-based question routing",
-      "Designed a gamification system with scoring and achievement tracking to boost engagement",
-      "Built modular architecture for future extensibility — APIs, user-generated content, additional quiz categories",
-      "Prioritized inclusive UX to ensure accessibility across diverse user demographics",
+      "Flask application with SQLAlchemy ORM and Jinja2 for server-side rendering. The quiz engine implements dynamic question routing by category, progress tracking per session, and a scoring layer. MySQL handles persistent storage.",
+    techStack: ["Python", "Flask", "SQLAlchemy", "MySQL", "Jinja2", "Bootstrap"],
+    highlights: [
+      "Engineered dynamic quiz logic with category-based question routing",
+      "Built a gamification system with scoring and achievement tracking",
+      "Designed modular architecture for future extensibility",
+      "Prioritized inclusive UX across diverse user demographics",
     ],
-    lessons:
-      "Gamification isn't just about points — it's about making learning feel rewarding. Building the quiz engine taught me how to structure dynamic content delivery systems and think about user motivation as a first-class engineering concern.",
+    reflection:
+      "Gamification isn't just about points — it's about making learning feel rewarding. This project taught me how to structure dynamic content delivery and think about user motivation as an engineering concern.",
     github: "https://github.com/Pinness/Health_Quest",
     icon: Heart,
-    role: "Solo Developer — designed the full MVP, implemented quiz logic, database schema, and frontend.",
+    role: "Solo Developer — designed the full MVP, quiz logic, database schema, and frontend.",
   },
   {
     id: "ai-character",
@@ -69,20 +69,20 @@ const projects = [
     subtitle: "FastAPI AI Backend Architecture",
     category: "backend",
     overview:
-      "An API-only backend platform that enables users to chat with AI-powered characters. Built with FastAPI and a clean layered architecture, integrating Groq's LLM API with a stub mode for offline development.",
-    problem:
-      "AI conversation platforms often tightly couple frontend and backend logic, making integration difficult. This project required a pure API backend that any frontend could consume, with clean separation between character management, conversation lifecycle, and LLM integration.",
+      "An API-only backend that enables users to chat with AI-powered characters — built with clean layered architecture and a stub mode for offline development.",
+    story:
+      "AI conversation platforms often tightly couple frontend and backend. This project was about building a pure API backend that any frontend could consume. The key challenge: how do you design clean service boundaries between character management, conversation lifecycle, and LLM integration?",
     architecture:
-      "Production-ready modular architecture with distinct layers: api/ (FastAPI routes), service/ (CharacterService, ConversationService, LLMService, PlatformService orchestrator), model/ (Pydantic schemas), and core/ (configuration, logging). The PlatformService composes domain services for clean orchestration. LLM stub mode enables development without external API dependencies.",
+      "Modular FastAPI architecture: api/ (routes), service/ (CharacterService, ConversationService, LLMService, PlatformService orchestrator), model/ (Pydantic schemas), core/ (config, logging). The PlatformService composes domain services. LLM stub mode enables development without external API costs.",
     techStack: ["Python", "FastAPI", "Pydantic", "Groq API", "Pytest"],
-    challenges: [
-      "Designed a PlatformService orchestrator that cleanly composes character, conversation, and LLM services",
-      "Implemented LLM stub mode for offline development and testing without external API costs",
-      "Built comprehensive test coverage with Pytest for API, services, and utilities",
-      "Structured predefined characters via JSON data files for easy extensibility",
+    highlights: [
+      "Designed a PlatformService orchestrator composing character, conversation, and LLM services",
+      "Implemented LLM stub mode for offline development and testing",
+      "Built comprehensive test coverage with Pytest",
+      "Structured predefined characters via JSON data files",
     ],
-    lessons:
-      "Clean architecture pays dividends even on smaller projects. The service composition pattern — where a PlatformService orchestrates domain services — is a pattern I now use across all backend projects. Stub modes for external services are essential for developer productivity.",
+    reflection:
+      "Clean architecture pays dividends even on smaller projects. The service composition pattern — where a PlatformService orchestrates domain services — is something I now reach for on every backend project.",
     github: "https://github.com/Algorithmia-SE/AI-Character-Conversation-Platform",
     icon: MessageSquare,
     role: "Backend Engineer — architected the service layer, API design, and testing infrastructure.",
@@ -90,56 +90,47 @@ const projects = [
   {
     id: "fyenance",
     title: "Fyenance",
-    subtitle: "Personal Expense Tracker",
+    subtitle: "Personal Expense Tracker — Collaborative Project",
     category: "fullstack",
     overview:
-      "A full-stack personal expense tracker with dynamic dashboards, budget management, real-time analytics, and currency updates — built with Django backend and React frontend.",
-    problem:
-      "Individuals need a simple yet powerful way to track expenses, set budgets, and visualize spending patterns. Existing tools are either too complex or lack real-time analytics. Fyenance bridges this gap with a clean, intuitive interface backed by robust backend logic.",
+      "A full-stack expense tracker with dashboards, budget management, and real-time analytics. Built collaboratively with a team — I focused on the backend.",
+    story:
+      "This was a collaborative project where I contributed as a backend developer. The team needed someone to build the authentication system, design API contracts, and implement budget logic. Working on a shared codebase taught me the importance of clear documentation and consistent API schemas — when multiple developers build against the same backend, contracts become critical infrastructure.",
     architecture:
-      "Django handles backend tasks including database management, server-side logic, and API endpoints. React provides the dynamic, interactive frontend with auth context for session management and global state for transactions and budgets. JWT authentication secures all API endpoints with token-based session management.",
+      "Django backend with React frontend. JWT authentication secures all endpoints. Auth context manages sessions on the frontend, while global state handles transactions and budgets. PostgreSQL for persistent storage.",
     techStack: ["Django", "React", "JavaScript", "PostgreSQL", "JWT", "REST APIs"],
-    challenges: [
-      "Implemented JWT authentication with secure token management and session handling",
-      "Built comprehensive API documentation for frontend-backend integration",
-      "Engineered budget logic with real-time analytics and spending pattern visualization",
-      "Designed a dynamic dashboard that adapts between new and returning user experiences",
+    highlights: [
+      "Implemented JWT authentication with secure token management",
+      "Built comprehensive API documentation for frontend integration",
+      "Engineered budget logic with real-time analytics",
+      "Designed adaptive dashboards for new vs returning users",
     ],
-    lessons:
-      "Working as a backend contributor on a team project taught me the importance of API contracts and documentation. When multiple developers build against the same backend, clear endpoint documentation and consistent response schemas become critical infrastructure.",
+    reflection:
+      "Contributing to someone else's codebase teaches you things solo projects never will — especially about API contracts, documentation discipline, and building systems that other developers can trust.",
     github: "https://github.com/STARR44/fyenance",
     icon: Wallet,
-    role: "Backend Developer — built JWT authentication, API endpoints, budget logic, and documentation.",
+    role: "Backend Contributor — built JWT auth, API endpoints, budget logic, and documentation.",
   },
   {
     id: "auth",
     title: "User Authentication System",
-    subtitle: "FastAPI Security Architecture",
+    subtitle: "FastAPI Security Microservice",
     category: "backend",
     overview:
-      "A production-grade authentication microservice built with FastAPI, implementing secure user registration, login, and JWT token management — designed to be consumed by frontend applications or other microservices.",
-    problem:
-      "Modern applications need robust identity management. This project addresses the need for a reusable, async-first authentication module that handles user identity with security best practices — password hashing, token-based auth, and proper session management.",
+      "A production-grade authentication microservice — user registration, login, and dual JWT token management, built from scratch to deeply understand identity systems.",
+    story:
+      "I built this because I wanted to understand authentication at a fundamental level — not just using a library, but designing the entire flow. What happens when a password is submitted? How are tokens signed? Why do we need both access and refresh tokens? Building it from scratch answered all of these questions.",
     architecture:
-      "The service follows a clean layered architecture: Routes → Service → Models. FastAPI handles request routing and validation via Pydantic schemas. SQLModel (built on SQLAlchemy) manages database models with MySQL. Alembic handles schema migrations. The auth flow issues dual JWT tokens (access + refresh) signed with a secret key, and passwords are hashed with bcrypt before storage.",
-    techStack: [
-      "Python",
-      "FastAPI",
-      "MySQL",
-      "SQLModel",
-      "Alembic",
-      "PyJWT",
-      "Bcrypt",
-      "Pydantic",
+      "Clean layered architecture: Routes → Service → Models. FastAPI for routing, Pydantic for validation, SQLModel (on SQLAlchemy) for database models with MySQL. Alembic for schema migrations. Dual JWT tokens (access + refresh) signed with secrets. Passwords hashed with bcrypt.",
+    techStack: ["Python", "FastAPI", "MySQL", "SQLModel", "Alembic", "PyJWT", "Bcrypt", "Pydantic"],
+    highlights: [
+      "Implemented async database sessions with asyncmy for non-blocking I/O",
+      "Designed dual-token strategy (access + refresh) for session management",
+      "Structured codebase with clean separation: routes, services, schemas, utilities",
+      "Managed migrations with Alembic for schema evolution without data loss",
     ],
-    challenges: [
-      "Implemented async database sessions with asyncmy for non-blocking I/O operations",
-      "Designed a dual-token strategy (access + refresh) for secure session management",
-      "Structured the codebase with separation of concerns: routes, services, schemas, and utilities",
-      "Managed database migrations with Alembic for schema evolution without data loss",
-    ],
-    lessons:
-      "Authentication is never 'simple.' Every decision — token expiry, password hashing algorithm, session strategy — has security implications. Building this from scratch deepened my understanding of how identity systems work behind the hood.",
+    reflection:
+      "Authentication is never 'simple.' Every decision — token expiry, hashing algorithm, session strategy — has security implications. Building this from scratch deepened my understanding of how identity systems truly work.",
     github: "https://github.com/Pinness/UserAuthentication_fastapi",
     icon: Shield,
     role: "Solo Developer — designed and implemented the complete authentication system.",
@@ -150,27 +141,20 @@ const projects = [
     subtitle: "Hackathon Backend Architecture",
     category: "backend",
     overview:
-      "A modern backend architecture built during a hackathon, demonstrating rapid API development with FastAPI and clean architectural patterns for a fintech-adjacent data platform.",
-    problem:
-      "Hackathon challenge requiring a functional backend within tight time constraints. The system needed to handle data connections, user management, and API integrations with a well-structured codebase that could scale beyond the hackathon.",
+      "A modern backend architecture built during a hackathon — demonstrating that good patterns don't slow you down, they accelerate you.",
+    story:
+      "Hackathons test your ability to make quick architectural decisions under pressure. When the clock is ticking, you learn which patterns actually matter and which are ceremony. This project proved that clean service layers, dependency injection, and Pydantic validation can be set up fast — and they pay for themselves immediately in debugging time saved.",
     architecture:
-      "Leveraged FastAPI's dependency injection system for clean route composition. Structured with modular service layers, database models, and configuration management. Designed for rapid iteration while maintaining clean separation between business logic and transport layers.",
-    techStack: [
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "Pydantic",
-      "Docker",
-    ],
-    challenges: [
-      "Delivered a production-quality architecture within hackathon time constraints",
-      "Designed modular service patterns that could scale beyond the initial prototype",
+      "FastAPI with dependency injection for clean route composition. Modular service layers, SQLAlchemy models, and configuration management. Designed for rapid iteration while maintaining clean separation between business logic and transport layers. Containerized with Docker.",
+    techStack: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pydantic", "Docker"],
+    highlights: [
+      "Delivered production-quality architecture within hackathon time constraints",
+      "Designed modular patterns that could scale beyond the prototype",
       "Implemented clean API contracts with comprehensive Pydantic validation",
-      "Set up containerized deployment for consistent development environments",
+      "Set up containerized deployment for consistent environments",
     ],
-    lessons:
-      "Hackathons test your ability to make quick architectural decisions. The key insight: good patterns don't slow you down — they accelerate you.",
+    reflection:
+      "The key insight from this hackathon: good patterns don't slow you down — they accelerate you. Structure is speed when the pressure is real.",
     github: "https://github.com/Pinness/tally-connect",
     icon: Database,
     role: "Solo Developer — built the entire backend architecture during the hackathon.",
@@ -197,14 +181,14 @@ const ProjectsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-display text-primary tracking-widest uppercase mb-2">
-              Case Studies
+              Engineering Stories
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold">
-              Engineering Stories
+              Projects I've Built
             </h2>
             <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
-              Not just what I built — but the thinking, architecture, and
-              decisions behind each project.
+              Not just what I built — but why, how, and what I learned along
+              the way. Click any project to read the full story.
             </p>
           </div>
 
@@ -226,7 +210,7 @@ const ProjectsSection = () => {
           </div>
 
           {/* Project cards */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {filtered.map((project) => {
               const isOpen = expanded === project.id;
               return (
@@ -251,7 +235,7 @@ const ProjectsSection = () => {
                           {project.subtitle}
                         </p>
                       </div>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="hidden sm:flex flex-wrap gap-2">
                         {project.techStack.slice(0, 4).map((tech) => (
                           <Badge
                             key={tech}
@@ -273,19 +257,20 @@ const ProjectsSection = () => {
                     </p>
                   </div>
 
-                  {/* Expanded content */}
+                  {/* Expanded — the engineering story */}
                   {isOpen && (
                     <div className="px-6 md:px-8 pb-8 space-y-8 border-t border-border/30 pt-6 animate-fade-in">
-                      <div className="grid md:grid-cols-2 gap-8">
-                        <div className="space-y-3">
-                          <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
-                            The Problem
-                          </h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {project.problem}
-                          </p>
-                        </div>
+                      {/* The Story */}
+                      <div className="space-y-3">
+                        <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
+                          The Story
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {project.story}
+                        </p>
+                      </div>
 
+                      <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-3">
                           <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
                             Architecture
@@ -294,37 +279,35 @@ const ProjectsSection = () => {
                             {project.architecture}
                           </p>
                         </div>
+                        <div className="space-y-3">
+                          <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
+                            My Role
+                          </h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {project.role}
+                          </p>
+                        </div>
                       </div>
 
-                      {/* My Role */}
-                      <div className="space-y-3">
-                        <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
-                          My Role
-                        </h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {project.role}
-                        </p>
-                      </div>
-
-                      {/* Challenges */}
+                      {/* Highlights */}
                       <div className="space-y-3">
                         <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
                           Engineering Highlights
                         </h4>
                         <ul className="grid md:grid-cols-2 gap-3">
-                          {project.challenges.map((c, i) => (
+                          {project.highlights.map((h, i) => (
                             <li
                               key={i}
                               className="flex gap-3 text-sm text-muted-foreground"
                             >
                               <Layers className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                              {c}
+                              {h}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      {/* Tech stack full */}
+                      {/* Tech stack */}
                       <div className="space-y-3">
                         <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
                           Full Tech Stack
@@ -338,13 +321,13 @@ const ProjectsSection = () => {
                         </div>
                       </div>
 
-                      {/* Lessons */}
+                      {/* Reflection */}
                       <div className="space-y-3">
                         <h4 className="font-display font-semibold text-primary text-sm uppercase tracking-wider">
-                          Lessons Learned
+                          Reflection
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed italic border-l-2 border-primary/30 pl-4">
-                          {project.lessons}
+                          {project.reflection}
                         </p>
                       </div>
 

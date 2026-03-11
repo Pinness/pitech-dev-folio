@@ -11,13 +11,14 @@ const CTASection = () => {
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight">
-            Ready to build your{" "}
-            <span className="text-gradient">next digital product?</span>
+            Ready to build something{" "}
+            <span className="text-gradient">that actually works?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
             If you're building a startup, business platform, or digital product
-            and want it engineered properly — PinessTech Studio can help you
-            build it. From architecture to deployment, every detail matters.
+            and want it engineered properly — not just thrown together —
+            PinessTech Studio can help you build it. From architecture to
+            deployment, every detail matters.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -25,7 +26,7 @@ const CTASection = () => {
               onClick={() => scrollTo("contact")}
               className="font-display text-base gap-2 group"
             >
-              Start a Project
+              Let's Build Something
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
