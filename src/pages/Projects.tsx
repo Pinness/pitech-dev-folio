@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import avatarImg from "@/assets/1752184730238.jpg";
 import { Button } from "@/components/ui/button";
 import {
   Github,

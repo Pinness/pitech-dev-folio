@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import avatarImg from "@/assets/1752184730238.jpg";
 import {
   ArrowRight,
   ChevronDown,

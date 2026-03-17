@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import avatarImg from "@/assets/1752184730238.jpg";
 import {
   Youtube,
   MessageCircle,
