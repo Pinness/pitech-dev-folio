@@ -117,7 +117,13 @@ const Mentorship = () => (
           </div>
 
           {/* Personal note */}
-          <div className="glass rounded-xl p-6 md:p-8 mb-14 max-w-3xl mx-auto text-center space-y-3">
+          <div className="glass rounded-xl p-6 md:p-8 mb-14 max-w-3xl mx-auto text-center space-y-4">
+            <img
+              src={avatarImg}
+              alt="Happiness Adam – Mentor and Software Engineer"
+              className="w-20 h-20 rounded-full object-cover mx-auto ring-2 ring-primary/20"
+              loading="lazy"
+            />
             <p className="text-muted-foreground leading-relaxed text-sm italic">
               "I started sharing what I learn because I remember how confusing
               technology felt when I was figuring things out on my own. If
