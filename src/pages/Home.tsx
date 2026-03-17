@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import avatarImg from "@/assets/1752184730238.jpg";
 import {
   ArrowRight,
   ChevronDown,
@@ -95,56 +96,72 @@ const Home = () => (
         }}
       />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <div className="space-y-8">
-          <p className="text-sm font-display text-primary tracking-widest uppercase animate-fade-in">
-            PinessTech Studio
-          </p>
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Text */}
+          <div className="flex-1 text-center lg:text-left space-y-8">
+            <p className="text-sm font-display text-primary tracking-widest uppercase animate-fade-in">
+              PinessTech Studio
+            </p>
 
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight animate-fade-in">
-            I Build Backend Systems That Scale
-            <br />
-            and Frontend Experiences
-            <br />
-            <span className="text-gradient">That Sell</span>
-          </h1>
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight animate-fade-in">
+              I Build Backend Systems That Scale
+              <br />
+              and Frontend Experiences
+              <br />
+              <span className="text-gradient">That Sell</span>
+            </h1>
 
-          <p
-            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in"
-            style={{ animationDelay: "0.2s", opacity: 0 }}
-          >
-            You focus on the vision; I'll handle the engineering. From secure
-            backend architecture to seamless frontend interfaces, I build
-            high-performance websites and digital products that scale with
-            your business.
-          </p>
-
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
-            style={{ animationDelay: "0.4s", opacity: 0 }}
-          >
-            <Button size="lg" asChild className="font-display text-base gap-2 group">
-              <Link to="/projects">
-                View My Work
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild className="font-display text-base">
-              <Link to="/contact">Start a Project</Link>
-            </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              onClick={() =>
-                window.open(
-                  "https://chat.whatsapp.com/L8k7rTVTky66Bzev3KjVK0?mode=gi_t",
-                  "_blank"
-                )
-              }
-              className="font-display text-base text-primary hover:text-primary"
+            <p
+              className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.2s", opacity: 0 }}
             >
-              Join the Mentorship Community
-            </Button>
+              You focus on the vision; I'll handle the engineering. From secure
+              backend architecture to seamless frontend interfaces, I build
+              high-performance websites and digital products that scale with
+              your business.
+            </p>
+
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in"
+              style={{ animationDelay: "0.4s", opacity: 0 }}
+            >
+              <Button size="lg" asChild className="font-display text-base gap-2 group">
+                <Link to="/projects">
+                  View My Work
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild className="font-display text-base">
+                <Link to="/contact">Start a Project</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() =>
+                  window.open(
+                    "https://chat.whatsapp.com/L8k7rTVTky66Bzev3KjVK0?mode=gi_t",
+                    "_blank"
+                  )
+                }
+                className="font-display text-base text-primary hover:text-primary"
+              >
+                Join the Mentorship Community
+              </Button>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="shrink-0 animate-fade-in" style={{ animationDelay: "0.3s", opacity: 0 }}>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-accent rounded-2xl opacity-20 blur group-hover:opacity-30 transition-opacity duration-500" />
+              <img
+                src={avatarImg}
+                alt="Happiness Adam – Founder of PinessTech Studio"
+                className="relative w-64 h-72 sm:w-72 sm:h-80 lg:w-[420px] lg:h-[480px] rounded-2xl object-cover shadow-card"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>

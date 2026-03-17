@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import avatarImg from "@/assets/1752184730238.jpg";
 import {
   ArrowRight,
   Box,
@@ -95,6 +96,12 @@ const Services = () => (
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
+            <img
+              src={avatarImg}
+              alt="Happiness Adam – Software Engineer building scalable web systems"
+              className="w-20 h-20 rounded-full object-cover mx-auto mb-4 ring-2 ring-primary/20"
+              loading="lazy"
+            />
             <p className="text-sm font-display text-primary tracking-widest uppercase mb-2">
               How I Can Help You Build
             </p>

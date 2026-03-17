@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import avatarImg from "@/assets/1752184730238.jpg";
 import { Button } from "@/components/ui/button";
 import {
   Github,
@@ -194,6 +195,18 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <img
+                  src={avatarImg}
+                  alt="Happiness Adam – Founder of PinessTech Studio"
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
+                  loading="lazy"
+                />
+                <div className="text-left">
+                  <p className="text-sm font-display font-semibold text-foreground">Built by Happiness Adam</p>
+                  <p className="text-xs text-muted-foreground">PinessTech Studio</p>
+                </div>
+              </div>
               <p className="text-sm font-display text-primary tracking-widest uppercase mb-2">
                 Engineering Stories
               </p>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import avatarImg from "@/assets/1752184730238.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -67,6 +68,18 @@ const Contact = () => {
             <div className="grid lg:grid-cols-5 gap-12">
               {/* Info */}
               <div className="lg:col-span-2 space-y-8">
+                <div className="flex items-center gap-3 mb-2">
+                  <img
+                    src={avatarImg}
+                    alt="Happiness Adam – Founder of PinessTech Studio"
+                    className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/20"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="font-display text-sm font-semibold text-foreground">Happiness Adam</p>
+                    <p className="text-xs text-muted-foreground">PinessTech Studio</p>
+                  </div>
+                </div>
                 <div className="space-y-4">
                   <a
                     href="tel:+2348104947058"
